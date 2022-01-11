@@ -25,7 +25,6 @@ $(document).ready(function(){
                     $(image).css('opacity', '0.4')
                 }
             }
-            
         })
     })
 
