@@ -1,4 +1,4 @@
-$(document).ready(function(){ 
+$(document).ready(function(){
     const owl = $('.owl-carousel');
     owl.owlCarousel({
         items:7,
