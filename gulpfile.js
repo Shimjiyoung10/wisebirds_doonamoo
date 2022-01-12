@@ -7,18 +7,19 @@ const uglify = require("gulp-uglify");
 const cssnano = require("gulp-cssnano");
 const imagemin = require("gulp-imagemin");
 const del = require("del");
+const sass = require('gulp-sass')(require('sass'));
 
 // PATHS
 //===================================
 const files = {
   indexPath: "./src/*.html",
-  cssPath: "./src/css/**/*.css",
+  cssPath: "./src/css/styles.scss",
   jsPath: "./src/js/index.js",
   imagesPath: "./src/images/**/*",
 };
 
 // Path: CSS Libraries
-const libPath = ["./src/css/lib/owl.carousel.css", "owl.theme.default.css"];
+const libPath = ["./src/css/lib/owl.carousel.css", "./src/css/lib/owl.theme.default.css", "./src/css/lib/normalize.css"];
 
 // Path: JS Vendor
 const vendorPath = [
@@ -49,6 +50,7 @@ function imageTask() {
 // Task: CSS
 function styleTask() {
   return src(files.cssPath)
+  .pipe(sass())
   .pipe(cssnano())
   .pipe(concat("styles.min.css"))
   .pipe(dest("./dist/css"))
@@ -75,7 +77,8 @@ function vendorTask() {
 
 // Task: CSS (libraries)
 function libTask() {
-  return src(libPath,{allowEmpty:true})
+  return src(libPath)
+  .pipe(sass())
   .pipe(cssnano())
   .pipe(concat("lib.min.css"))
   .pipe(dest("./dist/css"))

@@ -16,9 +16,9 @@ $(document).ready(function(){
             const image = $(node).find('img');
             const className = $(image).attr('class');
             if (idx === 2 || idx === 3 || idx === 4) {
-                $(image).attr('src', `img/color/${className}_color.png`).css('opacity', '1')
+                $(image).attr('src', `images/color/${className}_color.png`).css('opacity', '1')
             } else {
-                $(image).attr('src', `img/black/${className}_black.png`)
+                $(image).attr('src', `images/black/${className}_black.png`)
                 if (idx === 0 || idx === 6) {
                     $(image).css('opacity', '0.15')
                 } else {
@@ -36,16 +36,16 @@ $(document).ready(function(){
     //         let className = actives[i].querySelector('img').getAttribute('class')
     //         if (i>1 && i<5) {
     //             $(`.${className}`)
-    //             .attr("src",`img/color/${className}_color.png`)
+    //             .attr("src",`images/color/${className}_color.png`)
     //             .css('opacity','1');
     //         } else if(i===1 || i===5) {
     //             $(`.${className}`)
-    //             .attr("src",`img/black/${className}_black.png`)
+    //             .attr("src",`images/black/${className}_black.png`)
     //             .css('opacity','0.4');
     //             //15% 흐리게
     //         } else if(i===0 || i===6){
     //             $(`.${className}`)
-    //             .attr("src",`img/black/${className}_black.png`)
+    //             .attr("src",`images/black/${className}_black.png`)
     //             .css('opacity','0.15');
     //         }
     //     }
