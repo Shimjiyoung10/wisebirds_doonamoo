@@ -1,31 +1,55 @@
 $(document).ready(function(){
+    $('img[usemap]').rwdImageMaps();
     const owl = $('.owl-carousel');
     owl.owlCarousel({
-        items:7,
         loop:true,
-        margin:10,
+        margin: -15,
         autoplay:true,
         autoplayTimeout:2000,
-        autoplayHoverPause:true
+        autoplayHoverPause:true,
+        responsive: {
+            0: {
+                items: 5,
+            },
+            1025: {
+                items: 7,
+            }
+        }
     });
 
     owl.on('translated.owl.carousel', function(event) {
-        const parent = event.currentTarget;
+        const parent = event.target;
         const activeItems = $(parent).find('.owl-item.active');
-        activeItems.each(function(idx, node){
-            const image = $(node).find('img');
-            const className = $(image).attr('class');
-            if (idx === 2 || idx === 3 || idx === 4) {
-                $(image).attr('src', `images/color/${className}_color.png`).css('opacity', '1')
-            } else {
-                $(image).attr('src', `images/black/${className}_black.png`)
-                if (idx === 0 || idx === 6) {
-                    $(image).css('opacity', '0.15')
+        if (event.page.size === 7) {
+            // Desktop
+            activeItems.each(function(idx, node){
+                const image = $(node).find('img');
+                const className = $(image).attr('class');
+                if (idx === 2 || idx === 3 || idx === 4) {
+                    $(image).attr('src', `images/color/${className}_color.png`).css('opacity', '1')
                 } else {
-                    $(image).css('opacity', '0.4')
+                    $(image).attr('src', `images/black/${className}_black.png`)
+                    if (idx === 0 || idx === 6) {
+                        $(image).css('opacity', '0.15')
+                    } else {
+                        $(image).css('opacity', '0.4')
+                    }
                 }
-            }
-        })
+            })
+
+        } else {
+            // Mobile, Tablet
+            activeItems.each(function(idx, node){
+                const image = $(node).find('img');
+                const className = $(image).attr('class');
+                if (idx === 1 || idx === 2 || idx === 3) {
+                    $(image).attr('src', `images/color/${className}_color.png`).css('opacity', '1')
+                } else {
+                    $(image).attr('src', `images/black/${className}_black.png`);
+                    $(image).css('opacity', '0.4');
+                }
+            })
+        }
     })
 
 

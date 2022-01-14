@@ -24,7 +24,8 @@ const libPath = ["./src/css/lib/owl.carousel.css", "./src/css/lib/owl.theme.defa
 // Path: JS Vendor
 const vendorPath = [
   "./src/js/vendor/jquery-3.6.0.min.js",
-  "./src/js/vendor/owl.carousel.min.js"
+  "./src/js/vendor/owl.carousel.min.js",
+  "./src/js/vendor/jquery.rwdImageMaps.min.js"
 ];
 
 // TASKS
