@@ -9,6 +9,10 @@
     }
 }
 
+body {
+    overflow-x: hidden;
+}
+
 * {
     margin: 0;
 }
@@ -80,6 +84,7 @@ img {
     align-items: center;
     justify-content: center;
     padding-top: 100px;
+
     .images {
         display: none;
     }
@@ -88,6 +93,8 @@ img {
         justify-content: center;
         display: flex;
         flex-direction: row;
+        margin-left: -350px;
+        margin-right: -350px;
         .leftBox {
             margin-top: 59px;
             display: flex;
