@@ -47,16 +47,16 @@ img {
             }
             @media (max-width: 1024px) {
                 img {
-
-                    padding-left: 20px;
-                }
-            }
-            @media (max-width: 640px) {
-                img {
                     width: 130px;
                     padding-left: 20px;
                 }
             }
+            //@media (max-width: 640px) {
+            //    img {
+            //        width: 130px;
+            //        padding-left: 20px;
+            //    }
+            //}
         }
     }
 }
@@ -256,17 +256,6 @@ img {
         display: flex;
         flex-direction: column;
     }
-    @media (max-width: 768px) {
-        height: 760px;
-        .images {
-            display: block;
-            width: 768px;
-            height: 760px;
-        }
-        .container {
-            display: none;
-        }
-    }
 }
 
 .section6 {
@@ -291,18 +280,6 @@ img {
             }
         }
     }
-    @media (max-width: 768px) {
-        height: 630px;
-        .container {
-            width: 54%;
-        }
-    }
-    @media (max-width: 640px) {
-        height: 580px;
-        .container{
-            width: 62%;
-        }
-    }
 }
 
 .footer {
@@ -312,19 +289,6 @@ img {
         display: flex;
         justify-content: center;
         align-items: center;
-    }
-    @media (max-width: 768px) {
-        height: 130px;
-        .container{
-            margin-left: 10px;
-            margin-right: 10px;
-        }
-    }
-    @media (max-width: 640px) {
-        height: 140px;
-        .container {
-            margin-top: 30px;
-        }
     }
 }
 
