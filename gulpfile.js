@@ -7,6 +7,7 @@ const uglify = require("gulp-uglify");
 const cssnano = require("gulp-cssnano");
 const imagemin = require("gulp-imagemin");
 const babel = require('gulp-babel');
+const autoprefixer = require('gulp-autoprefixer');
 const del = require("del");
 const sass = require('gulp-sass')(require('sass'));
 
@@ -53,6 +54,9 @@ function imageTask() {
 function styleTask() {
     return src(files.cssPath)
         .pipe(sass())
+        .pipe(autoprefixer({
+            cascade: false
+        }))
         .pipe(cssnano())
         .pipe(concat("styles.min.css"))
         .pipe(dest("./dist/css"))

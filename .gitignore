@@ -1,3 +1,9 @@
 node_modules/
 .vscode/
 dist/
+/.idea/.gitignore
+/.idea/markdown.xml
+/.idea/modules.xml
+/package-lock.json
+/.idea/vcs.xml
+/.idea/wisebirds_doonamoo.iml
