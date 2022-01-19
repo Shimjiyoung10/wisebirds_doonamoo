@@ -35,7 +35,7 @@ img {
         align-items: center;
         position: fixed;
         width: 100%;
-        z-index: 9999;
+        z-index: 3;
         @media (max-width: 1024px) {
            height: 70px;
         }
@@ -67,18 +67,6 @@ img {
     }
 }
 
-.section0 {
-    width: 100%;
-    height: 60px;
-    background-color: #d71b26;
-    @media (max-width: 1024px) {
-        height: 70px;
-    }
-    @media (max-width: 640px) {
-        height: 60px;
-    }
-}
-
 .section1 {
     width: 100%;
     background-color: #d71b26;
@@ -95,31 +83,30 @@ img {
         justify-content: center;
         display: flex;
         flex-direction: row;
-        .leftBox {
-            margin-top: 59px;
-            display: flex;
-            flex-direction: column;
-            margin-bottom: 62px;
-            z-index: 2;
-            .button {
-                margin-top: 82px;
-                display: flex;
-                flex-direction: row;
-                a:first-child {
-                    margin-right: 15px;
-                }
-            }
-        }
-        .rightBox {
-            margin-left: -439px;
-            margin-right: -346px;
-            .image {
-                img {
-                    width: 1388px;
-                    height: 980px;
-                }
-            }
-        }
+        //.leftBox {
+        //    margin-top: 59px;
+        //    display: flex;
+        //    flex-direction: column;
+        //    margin-bottom: 62px;
+        //    .button {
+        //        margin-top: 82px;
+        //        display: flex;
+        //        flex-direction: row;
+        //        a:first-child {
+        //            margin-right: 15px;
+        //        }
+        //    }
+        //}
+        //.rightBox {
+        //    margin-left: -439px;
+        //    margin-right: -346px;
+        //    .image {
+        //        img {
+        //            width: 1388px;
+        //            height: 980px;
+        //        }
+        //    }
+        //}
     }
 }
 
@@ -154,6 +141,7 @@ img {
     padding-bottom: 165px;
 
     .background {
+        z-index: 2;
         width: 1590px;
         height: 1335px;
         position: absolute;
